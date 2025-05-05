@@ -104,3 +104,44 @@ Visual Reports:
      - Sales by State and City  -	Map Chart    -	State/City (Location or Row/Column), Sales
      - Sales by Ship Mode       - Donut Chart	   - Ship Mode (Legend), Sales
      - Sales by Region	         - Bar Chart      -	Region (Axis), Sales (Values)
+   
+       I added slicers for:
+   •	Region
+   •	Order Date
+   •	Category
+
+5. Create the KPIs (DAX Measures)
+I went to the Modeling tab → Click New Measure, and enter:
+1.	Total Profit
+
+Total Profit = SUM('Orders'[Profit])
+2.	Total Quantity
+
+Total Quantity = SUM('Orders'[Quantity])
+I inserted Card Visuals for both:
+    •	Card 1: Drag Total Profit
+    •	Card 2: Drag Total Quantity
+    •	Rename their titles accordingly
+
+
+6. Create Visual Reports
+
+   
+- Report                 -	Chart Type    -	Fields
+  
+- Profit by Category    - 	Donut Chart -	Axis: Category,
+                                          Values: Profit
+- Profit by Region	    - Bar Chart	    -  Axis: Region,
+                                          Values: Profit
+- Profit by Segment	     -Donut Chart	    -  Axis: Segment, 
+                                          Values: Profit
+- Profit by Year and Month-	Line Chart	  - Axis: Order Date ( Year → Month),
+                                          Values: Profit
+- Profit by Sub-Category-	Horizontal Bar Chart-	Axis: Sub-Category, 
+                                                Values: Profit
+
+   - I used slicers (filters) for:
+    •	Region
+    •	Category
+    •	Year
+
